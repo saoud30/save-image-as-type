@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Save Image As Type</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icons/icon48.png" alt="Logo" class="logo">
+      <h1>Save Image As Type</h1>
+    </div>
+    
+    <div class="settings">
+      <div class="setting-group">
+        <label>Quality</label>
+        <input type="range" id="quality" min="1" max="100" value="92" />
+        <span id="qualityValue">92%</span>
+      </div>
+
+      <div class="setting-group">
+        <label>Resize</label>
+        <div class="resize-inputs">
+          <input type="number" id="width" placeholder="Width" min="1" />
+          <span>×</span>
+          <input type="number" id="height" placeholder="Height" min="1" />
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" id="maintainAspectRatio" checked />
+          Maintain aspect ratio
+        </label>
+      </div>
+
+      <div class="setting-group">
+        <label>Options</label>
+        <label class="checkbox">
+          <input type="checkbox" id="stripMetadata" />
+          Strip metadata
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="optimizeImage" checked />
+          Optimize image
+        </label>
+      </div>
+
+      <div class="setting-group">
+        <label>Default Format</label>
+        <select id="defaultFormat">
+          <option value="jpg">JPG</option>
+          <option value="jpeg">JPEG</option>
+          <option value="png">PNG</option>
+          <option value="webp">WebP</option>
+          <option value="avif">AVIF</option>
+          <option value="gif">GIF</option>
+          <option value="svg">SVG</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <p>Right-click on any image to save it as:</p>
+      <ul>
+        <li>JPEG/JPG (adjustable quality)</li>
+        <li>PNG (lossless)</li>
+        <li>WebP (adjustable quality)</li>
+        <li>AVIF (next-gen format)</li>
+        <li>GIF (optimized)</li>
+        <li>SVG (for simple images)</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p class="version">Version 1.0</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
